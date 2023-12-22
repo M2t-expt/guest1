@@ -1,0 +1,14 @@
+Pattern0,チュートリアルを始めます。「git init」を実行し、 ローカルリポジトリを初期化しましょう。
+git init,続いて「git add -A」を実行し、 リポジトリ内のすべてのファイルをCommitの対象に指定してください(ステージングといいます)
+git add -A,「git commit -m "first commit"」で 先ほどステージングしたファイルをGitに保存しましょう
+git commit -m "first commit",「git branch -M main」を実行し、 デフォルトのブランチ名をmainに変更しましょう
+git branch -M main,続いてリモートリポジトリとの紐づけを行います。   「git remote add origin セットアップURL」 を実行してください。セットアップURLはリポジトリのURLに「.git」を付けるか、リポジトリ内のQuick setup のURLをコピーしてください
+git remote add origin .*,「git push -u origin main」を実行し、  紐づけしたリモートリポジトリにCommitした内容を保存しましょう
+git push -u origin main,次に共同開発に必要な手順を練習していきます。  まず、「git checkout -b test」を実行し、  testブランチの作成および移動をしましょう。
+git status,ここではステージングやCommitが必要なファイルが表示されます。「git add README.md」を実行し、  README.mdをステージングしましょう
+git add README.md,「git commit -m "README"」を実行しましょう
+git commit -m .*,「git push origin test」を実行しましょう。 ブランチでの変更をリモートリポジトリに更新します。  初期実装以外のPushでは-uは必要ありません
+git push origin .*,リモートリポジトリにてプルリクエストを作成してください。その後、Mergeを行ってください。Mergeが完了したら「git checkout main」を実行しましょう。
+git checkout main,「git pull origin main」を実行してください。  リモートリポジトリでMergeした内容をローカルリポジトリに保存します。
+git pull origin main,以上でチュートリアルは終了です。一度タイトルへ戻り、正常系シナリオへ進んでください。
+git checkout .*,README.md(ファイルの中身は空でよい)を作成し、 「git status」を実行してください。

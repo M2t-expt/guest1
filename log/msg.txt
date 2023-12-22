@@ -1,0 +1,21 @@
+cmd:WebSocket通信を開始しました
+Pattern0
+bot:チュートリアルを始めます。「git init」を実行し、 ローカルリポジトリを初期化しましょう。
+uni:git branch
+cmd:* test
+
+cmd:
+uni:git status
+cmd:On branch test
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	log/
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+cmd:
+bot:ここではステージングやCommitが必要なファイルが表示されます。「git add README.md」を実行し、  README.mdをステージングしましょう
+Help1
+bot:「git add ファイル名」  編集・追加したファイルのステージングを行う
+uni:
+Log out

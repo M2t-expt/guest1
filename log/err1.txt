@@ -1,0 +1,272 @@
+Microsoft Windows [Version 10.0.18362.418]
+(c) 2019 Microsoft Corporation. All rights reserved.
+
+C:\Users\m2tan>cd Desktop
+
+C:\Users\m2tan\Desktop>cd GitCollabSim
+
+C:\Users\m2tan\Desktop\GitCollabSim>cd Github
+
+C:\Users\m2tan\Desktop\GitCollabSim\Github>cd expt
+
+C:\Users\m2tan\Desktop\GitCollabSim\Github\expt>python server.py
+cmd:WebSocket通信を開始しました
+Pattern0
+bot:チュートリアルを始めます。「git init」を実行し、 ローカルリポジトリを初期化しましょう。
+uni:
+Help1
+bot:対応するコマンドが見つかりません
+uni:git init
+cmd:Initialized empty Git repository in C:/Users/m2tan/Desktop/GitCollabSim/Github/expt/.git/
+
+cmd:
+bot:続いて「git add -A」を実行し、 リポジトリ内のすべてのファイルをCommitの対象に指定してください(ステージングといいます)
+uni:git add -A
+cmd:
+cmd:warning: in the working copy of 'bot/app.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'bot/scenario1.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'server.py', LF will be replaced by CRLF the next time Git touches it
+
+bot:「git commit -m "first commit"」で 先ほどステージングしたファイルをGitに保存しましょう
+uni:git commit -m "first commit"
+cmd:
+cmd:Author identity unknown
+
+*** Please tell me who you are.
+
+Run
+
+  git config --global user.email "you@example.com"
+  git config --global user.name "Your Name"
+
+to set your account's default identity.
+Omit --global to set the identity only in this repository.
+
+fatal: unable to auto-detect email address (got 'm2tan@DESKTOP-LBI1U7L.(none)')
+
+bot:「git branch -M main」を実行し、 デフォルトのブランチ名をmainに変更しましょう
+uni:git branch -M main
+cmd:
+cmd:
+bot:続いてリモートリポジトリとの紐づけを行います。   「git remote add origin セットアップURL」 を実行してください。セッ トアップURLはリポジトリのURLに「.git」を付けるか、リポジトリ内のQuick setup のURLをコピーしてください
+uni:git config --grobal user.email ""
+cmd:
+cmd:error: unknown option `grobal'
+usage: git config [<options>]
+
+Config file location
+    --[no-]global         use global config file
+    --[no-]system         use system config file
+    --[no-]local          use repository config file
+    --[no-]worktree       use per-worktree config file
+    -f, --[no-]file <file>
+                          use given config file
+    --[no-]blob <blob-id> read config from given blob object
+
+Action
+    --[no-]get            get value: name [value-pattern]
+    --[no-]get-all        get all values: key [value-pattern]
+    --[no-]get-regexp     get values for regexp: name-regex [value-pattern]
+    --[no-]get-urlmatch   get value specific for the URL: section[.var] URL
+    --[no-]replace-all    replace all matching variables: name value [value-pattern]
+    --[no-]add            add a new variable: name value
+    --[no-]unset          remove a variable: name [value-pattern]
+    --[no-]unset-all      remove all matches: name [value-pattern]
+    --[no-]rename-section rename section: old-name new-name
+    --[no-]remove-section remove a section: name
+    -l, --[no-]list       list all
+    --[no-]fixed-value    use string equality when comparing values to 'value-pattern'
+    -e, --[no-]edit       open an editor
+    --[no-]get-color      find the color configured: slot [default]
+    --[no-]get-colorbool  find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --[no-]type <type>
+                          value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --[no-]null       terminate values with NUL byte
+    --[no-]name-only      show variable names only
+    --[no-]includes       respect include directives on lookup
+    --[no-]show-origin    show origin of config (file, standard input, blob, command line)
+    --[no-]show-scope     show scope of config (worktree, local, global, system, command)
+    --[no-]default <value>
+                          with --get, use default value when missing entry
+
+
+uni:git comfig --global user.email "github.expt@gmail.com"
+cmd:
+cmd:git: 'comfig' is not a git command. See 'git --help'.
+
+The most similar command is
+        config
+
+uni:git config --grobal user.email "github.expt@gmail.com"
+cmd:
+cmd:error: unknown option `grobal'
+usage: git config [<options>]
+
+Config file location
+    --[no-]global         use global config file
+    --[no-]system         use system config file
+    --[no-]local          use repository config file
+    --[no-]worktree       use per-worktree config file
+    -f, --[no-]file <file>
+                          use given config file
+    --[no-]blob <blob-id> read config from given blob object
+
+Action
+    --[no-]get            get value: name [value-pattern]
+    --[no-]get-all        get all values: key [value-pattern]
+    --[no-]get-regexp     get values for regexp: name-regex [value-pattern]
+    --[no-]get-urlmatch   get value specific for the URL: section[.var] URL
+    --[no-]replace-all    replace all matching variables: name value [value-pattern]
+    --[no-]add            add a new variable: name value
+    --[no-]unset          remove a variable: name [value-pattern]
+    --[no-]unset-all      remove all matches: name [value-pattern]
+    --[no-]rename-section rename section: old-name new-name
+    --[no-]remove-section remove a section: name
+    -l, --[no-]list       list all
+    --[no-]fixed-value    use string equality when comparing values to 'value-pattern'
+    -e, --[no-]edit       open an editor
+    --[no-]get-color      find the color configured: slot [default]
+    --[no-]get-colorbool  find the color setting: slot [stdout-is-tty]
+
+Type
+    -t, --[no-]type <type>
+                          value is given this type
+    --bool                value is "true" or "false"
+    --int                 value is decimal number
+    --bool-or-int         value is --bool or --int
+    --bool-or-str         value is --bool or string
+    --path                value is a path (file or directory name)
+    --expiry-date         value is an expiry date
+
+Other
+    -z, --[no-]null       terminate values with NUL byte
+    --[no-]name-only      show variable names only
+    --[no-]includes       respect include directives on lookup
+    --[no-]show-origin    show origin of config (file, standard input, blob, command line)
+    --[no-]show-scope     show scope of config (worktree, local, global, system, command)
+    --[no-]default <value>
+                          with --get, use default value when missing entry
+
+
+uni:git config --global user.email "github.expt@gmail.com"
+cmd:
+cmd:
+uni:git config --global user.name "m2Tanaka"
+cmd:
+cmd:
+uni:git status
+cmd:On branch main
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Computer.java
+        new file:   GameMain.java
+        new file:   Hand.java
+        new file:   VictoryOrDefeat.java
+        new file:   bot/__pycache__/scenario1.cpython-310.pyc
+        new file:   bot/__pycache__/scenario1.cpython-312.pyc
+        new file:   bot/app.py
+        new file:   bot/scenario1.py
+        new file:   bot_file/GameMain_Bot2.txt
+        new file:   bot_file/GameMain_Bot4.txt
+        new file:   bot_file/Hand_Bot2.txt
+        new file:   bot_file/VictoryOrDefeat_Bot4.txt
+        new file:   csv/Pattern0.csv
+        new file:   csv/Pattern1.csv
+        new file:   csv/Pattern2.csv
+        new file:   csv/help1.csv
+        new file:   server.py
+
+
+cmd:
+bot:ここではステージングやCommitが必要なファイルが表示されます。「git add README.md」を実行し、  README.mdをステージングしましょう
+uni:git remote add origin https://github.com/M2t-expt/guest1.git
+cmd:
+cmd:
+bot:「git push -u origin main」を実行し、  紐づけしたリモートリポジトリにCommitした内容を保存しましょう
+uni:git push -u origin main
+cmd:
+cmd:error: src refspec main does not match any
+error: failed to push some refs to 'https://github.com/M2t-expt/guest1.git'
+
+bot:次に共同開発に必要な手順を練習していきます。  まず、「git checkout -b test」を実行し、  testブランチの作成および移動をしましょう。
+uni:git checkout -b test
+cmd:
+cmd:Switched to a new branch 'test'
+
+bot:README.md(ファイルの中身は空でよい)を作成し、 「git status」を実行してください。
+uni:
+uni:git status
+cmd:On branch test
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+        new file:   Computer.java
+        new file:   GameMain.java
+        new file:   Hand.java
+        new file:   VictoryOrDefeat.java
+        new file:   bot/__pycache__/scenario1.cpython-310.pyc
+        new file:   bot/__pycache__/scenario1.cpython-312.pyc
+        new file:   bot/app.py
+        new file:   bot/scenario1.py
+        new file:   bot_file/GameMain_Bot2.txt
+        new file:   bot_file/GameMain_Bot4.txt
+        new file:   bot_file/Hand_Bot2.txt
+        new file:   bot_file/VictoryOrDefeat_Bot4.txt
+        new file:   csv/Pattern0.csv
+        new file:   csv/Pattern1.csv
+        new file:   csv/Pattern2.csv
+        new file:   csv/help1.csv
+        new file:   server.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        README.md.txt
+
+
+cmd:
+bot:ここではステージングやCommitが必要なファイルが表示されます。「git add README.md」を実行し、  README.mdをステージングしましょう
+uni:git add README.md.txt
+cmd:
+cmd:
+bot:「git commit -m "README"」を実行しましょう
+uni:git commit -m "README"
+cmd:[test (root-commit) 52da232] README
+ 18 files changed, 483 insertions(+)
+ create mode 100644 Computer.java
+ create mode 100644 GameMain.java
+ create mode 100644 Hand.java
+ create mode 100644 README.md.txt
+ create mode 100644 VictoryOrDefeat.java
+ create mode 100644 bot/__pycache__/scenario1.cpython-310.pyc
+ create mode 100644 bot/__pycache__/scenario1.cpython-312.pyc
+ create mode 100644 bot/app.py
+ create mode 100644 bot/scenario1.py
+ create mode 100644 bot_file/GameMain_Bot2.txt
+ create mode 100644 bot_file/GameMain_Bot4.txt
+ create mode 100644 bot_file/Hand_Bot2.txt
+ create mode 100644 bot_file/VictoryOrDefeat_Bot4.txt
+ create mode 100644 csv/Pattern0.csv
+ create mode 100644 csv/Pattern1.csv
+ create mode 100644 csv/Pattern2.csv
+ create mode 100644 csv/help1.csv
+ create mode 100644 server.py
+
+cmd:
+bot:「git push origin test」を実行しましょう。 ブランチでの変更をリモートリポジトリに更新します。  初期実装以外のPushで は-uは必要ありません
+uni:git push origin test
+info: please complete authentication in your browser...

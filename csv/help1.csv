@@ -1,0 +1,9 @@
+git init,「git add -A」 Commitするファイルの指定(ステージング)を行う
+git checkout main,「git pull origin main」  リモートリポジトリの内容をローカルに取り込む
+git checkout .*,「git add ファイル名」  編集・追加したファイルのステージングを行う
+git status,「git add ファイル名」  編集・追加したファイルのステージングを行う
+git add .*,「git commit -m "Commit名"」 ステージングしたファイルの編集内容をGitに保存する
+git branch .*,「git checkout ブランチ名」 ブランチを移動する。   「git checkout -b ブランチ名」 -bをつけることでブランチの作成と移動を同時に行える
+git commit -m .*,「git push origin 現在のブランチ名」 リモートリポジトリにCommitした内容を保存する
+git push -u origin main,「git branch ブランチ名」新規ブランチの作成を行う
+git push .*,プルリクエストを作成し、Mergeされた後「git checkout main」
