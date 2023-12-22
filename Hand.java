@@ -8,7 +8,12 @@ public class Hand {
 
     // 課題2 Playerの手の決定とその表示
     // 1ならば"グー",2ならば"チョキ",3ならば"パー"を返す
-    
+    if (hand == GU)
+      handName = "グー";
+    else if (hand == CHOKI)
+      handName = "チョキ";
+    else if (hand == PA)
+      handName = "パー";
 
     return handName;
   }
