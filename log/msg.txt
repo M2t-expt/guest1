@@ -160,3 +160,206 @@ cmd:From https://github.com/M2t-expt/guest1
 bot:以上でチュートリアルは終了です。一度タイトルへ戻り、正常系シナリオへ進んでください。
 uni:
 Log out
+cmd:WebSocket通信を開始しました
+Pattern1
+bot:正常系シナリオを開始します。チュートリアルに引き続き同じリポジトリを使用します。まずはブランチを作成しましょう
+uni:git branch dev
+cmd:
+cmd:
+bot:ブランチ作成後はブランチを移動しましょう
+uni:git checkout dev
+cmd:M	log/msg.txt
+
+cmd:Switched to branch 'dev'
+
+bot:実験手順をよく読み、ファイルを編集しましょう。  編集が終わったらステージング、Commit、Pushを行ってください
+uni:javac -encoding utf-8 GameMain.java
+cmd:
+cmd:
+uni:java GameMain.java
+cmd:1:グー 2:チョキ 3:パー
+じゃんけん...
+
+cmd:
+uni:java GameMain
+cmd:1:グー 2:チョキ 3:パー
+じゃんけん...
+
+cmd:
+uni:git add .
+cmd:
+cmd:
+bot:Commitを行う際、-m以降のコミットメッセージは "User_1"にしてください
+uni:git commit -m "User_1"
+cmd:[dev 5eeeb16] User_1
+ 3 files changed, 143 insertions(+)
+ create mode 100644 GameMain.class
+
+cmd:
+uni:
+Help1
+bot:「git push origin 現在のブランチ名」 リモートリポジトリにCommitした内容を保存する
+uni:git puch origin dev
+cmd:
+cmd:git: 'puch' is not a git command. See 'git --help'.
+
+The most similar command is
+	push
+
+uni:git push origin dev
+cmd:
+cmd:remote: 
+remote: Create a pull request for 'dev' on GitHub by visiting:        
+remote:      https://github.com/M2t-expt/guest1/pull/new/dev        
+remote: 
+To https://github.com/M2t-expt/guest1.git
+ * [new branch]      dev -> dev
+
+bot:Pushが完了したらプルリクエストの作成を行ってください。  その際、プルリクエスト名がUser_1であることを確認してください
+uni:git branch
+cmd:* dev
+  main
+  test
+
+cmd:
+GCBot:Pull Requestを検知
+GCBot:Pull Requestの情報を取得中
+bot:ユーザーからのPull Requestを検知しました
+bot:Pull Requestデータ
+リポジトリ名:M2t-expt/guest1
+Pull Request番号:2
+Pull Request名:User_1
+作成者:M2t-expt
+bot:Pull Request「User_1」をMergeしました
+bot:mainブランチに移動してリモートリポジトリの内容をPullしてください
+GCBot:Pull Requestを検知
+GCBot:Pull Requestの情報を取得中
+GCBot:Pull RequestがClosed
+GCBot:Botブランチを作成
+GCBot:GameMain.javaを編集
+GCBot:Hand.javaを編集
+GCBot:Push
+GCBot:Pull Request作成
+GCBot:Pull Requestを検知
+GCBot:Pull Requestの情報を取得中
+GCBot:Botの作成したPull Requestです
+GCBot:Pull Requestを検知
+GCBot:Pull Requestの情報を取得中
+GCBot:Pull RequestがClosed
+uni:git checkout main
+cmd:
+cmd:error: Your local changes to the following files would be overwritten by checkout:
+	GameMain.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+bot:mainブランチでPullをして、リモートリポジトリの内容をローカルに取り込んでください
+uni:
+uni:git checkout main
+cmd:
+cmd:error: Your local changes to the following files would be overwritten by checkout:
+	GameMain.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+bot:mainブランチでPullをして、リモートリポジトリの内容をローカルに取り込んでください
+uni:git branch
+cmd:* dev
+  main
+  test
+
+cmd:
+uni:git checkout main
+cmd:
+cmd:error: Your local changes to the following files would be overwritten by checkout:
+	GameMain.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+bot:mainブランチでPullをして、リモートリポジトリの内容をローカルに取り込んでください
+uni:git abort
+cmd:
+cmd:git: 'abort' is not a git command. See 'git --help'.
+
+uni:git --help
+cmd:usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]
+           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]
+           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]
+           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]
+           [--config-env=<name>=<envvar>] <command> [<args>]
+
+These are common Git commands used in various situations:
+
+start a working area (see also: git help tutorial)
+   clone     Clone a repository into a new directory
+   init      Create an empty Git repository or reinitialize an existing one
+
+work on the current change (see also: git help everyday)
+   add       Add file contents to the index
+   mv        Move or rename a file, a directory, or a symlink
+   restore   Restore working tree files
+   rm        Remove files from the working tree and from the index
+
+examine the history and state (see also: git help revisions)
+   bisect    Use binary search to find the commit that introduced a bug
+   diff      Show changes between commits, commit and working tree, etc
+   grep      Print lines matching a pattern
+   log       Show commit logs
+   show      Show various types of objects
+   status    Show the working tree status
+
+grow, mark and tweak your common history
+   branch    List, create, or delete branches
+   commit    Record changes to the repository
+   merge     Join two or more development histories together
+   rebase    Reapply commits on top of another base tip
+   reset     Reset current HEAD to the specified state
+   switch    Switch branches
+   tag       Create, list, delete or verify a tag object signed with GPG
+
+collaborate (see also: git help workflows)
+   fetch     Download objects and refs from another repository
+   pull      Fetch from and integrate with another repository or a local branch
+   push      Update remote refs along with associated objects
+
+'git help -a' and 'git help -g' list available subcommands and some
+concept guides. See 'git help <command>' or 'git help <concept>'
+to read about a specific subcommand or concept.
+See 'git help git' for an overview of the system.
+
+cmd:
+uni:git restore
+cmd:
+cmd:fatal: you must specify path(s) to restore
+
+uni:git checkout main
+cmd:
+cmd:error: Your local changes to the following files would be overwritten by checkout:
+	GameMain.java
+Please commit your changes or stash them before you switch branches.
+Aborting
+
+bot:mainブランチでPullをして、リモートリポジトリの内容をローカルに取り込んでください
+uni:git checkout main
+cmd:Your branch is up to date with 'origin/main'.
+
+cmd:Switched to branch 'main'
+
+bot:mainブランチでPullをして、リモートリポジトリの内容をローカルに取り込んでください
+uni:git pull origin main
+cmd:Updating 0a3f1bb..4d481f0
+Fast-forward
+ GameMain.class | Bin 0 -> 475 bytes
+ GameMain.java  |  43 ++++++++++--------
+ Hand.java      |  33 ++++++++------
+ log/msg.txt    | 141 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+ 4 files changed, 185 insertions(+), 32 deletions(-)
+ create mode 100644 GameMain.class
+
+cmd:From https://github.com/M2t-expt/guest1
+ * branch            main       -> FETCH_HEAD
+   0a3f1bb..4d481f0  main       -> origin/main
+
+bot:以上で正常系シナリオは終了です。一度タイトルへ戻り、異常系シナリオへ進んでください。
+uni:
+Log out

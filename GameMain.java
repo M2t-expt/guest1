@@ -17,6 +17,8 @@ public class GameMain {
 
     // 課題3 Computerの手の決定とその表示
     // ComputerクラスのdecidesComputerHandメソッドとHandクラスのgetHandNameメソッドを使ってPlayerの手を表示する
+    int computerHand = Computer.decidesComputerHand();
+    System.out.println("コンピュータ : " + Hand.getHandName(computerHand));
 
 
     // 課題4 勝敗判定とその表示
