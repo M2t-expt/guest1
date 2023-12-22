@@ -19,3 +19,144 @@ Help1
 bot:「git add ファイル名」  編集・追加したファイルのステージングを行う
 uni:
 Log out
+cmd:WebSocket通信を開始しました
+Pattern0
+bot:チュートリアルを始めます。「git init」を実行し、 ローカルリポジトリを初期化しましょう。
+cmd:WebSocket通信を開始しました
+Pattern0
+bot:チュートリアルを始めます。「git init」を実行し、 ローカルリポジトリを初期化しましょう。
+uni:
+uni:
+uni:git init
+cmd:Initialized empty Git repository in C:/Users/m2tan/Desktop/GitCollabSim/Github/expt/.git/
+
+cmd:
+bot:続いて「git add -A」を実行し、 リポジトリ内のすべてのファイルをCommitの対象に指定してください(ステージングといいます)
+uni:git add -A
+cmd:
+cmd:warning: in the working copy of 'bot/app.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'bot/scenario1.py', LF will be replaced by CRLF the next time Git touches it
+warning: in the working copy of 'server.py', LF will be replaced by CRLF the next time Git touches it
+
+bot:「git commit -m "first commit"」で 先ほどステージングしたファイルをGitに保存しましょう
+uni:git commit -m "first commit"
+cmd:[main (root-commit) 832a1a7] first commit
+ 19 files changed, 776 insertions(+)
+ create mode 100644 Computer.java
+ create mode 100644 GameMain.java
+ create mode 100644 Hand.java
+ create mode 100644 VictoryOrDefeat.java
+ create mode 100644 bot/__pycache__/scenario1.cpython-310.pyc
+ create mode 100644 bot/__pycache__/scenario1.cpython-312.pyc
+ create mode 100644 bot/app.py
+ create mode 100644 bot/scenario1.py
+ create mode 100644 bot_file/GameMain_Bot2.txt
+ create mode 100644 bot_file/GameMain_Bot4.txt
+ create mode 100644 bot_file/Hand_Bot2.txt
+ create mode 100644 bot_file/VictoryOrDefeat_Bot4.txt
+ create mode 100644 csv/Pattern0.csv
+ create mode 100644 csv/Pattern1.csv
+ create mode 100644 csv/Pattern2.csv
+ create mode 100644 csv/help1.csv
+ create mode 100644 log/err1.txt
+ create mode 100644 log/msg.txt
+ create mode 100644 server.py
+
+cmd:
+bot:「git branch -M main」を実行し、 デフォルトのブランチ名をmainに変更しましょう
+uni:git branch -M main
+cmd:
+cmd:
+bot:続いてリモートリポジトリとの紐づけを行います。   「git remote add origin セットアップURL」 を実行してください。セットアップURLはリポジトリのURLに「.git」を付けるか、リポジトリ内のQuick setup のURLをコピーしてください
+uni:git remote add origin 
+cmd:
+cmd:usage: git remote add [<options>] <name> <url>
+
+    -f, --[no-]fetch      fetch the remote branches
+    --[no-]tags           import all tags and associated objects when fetching
+                          or do not fetch any tag at all (--no-tags)
+    -t, --[no-]track <branch>
+                          branch(es) to track
+    -m, --[no-]master <branch>
+                          master branch
+    --[no-]mirror[=(push|fetch)]
+                          set up remote as a mirror to push to or fetch from
+
+
+bot:「git push -u origin main」を実行し、  紐づけしたリモートリポジトリにCommitした内容を保存しましょう
+uni:git remote add origin https://github.com/M2t-expt/guest1.git
+cmd:
+cmd:
+bot:「git push -u origin main」を実行し、  紐づけしたリモートリポジトリにCommitした内容を保存しましょう
+uni:git push -u origin main
+cmd:branch 'main' set up to track 'origin/main'.
+
+cmd:To https://github.com/M2t-expt/guest1.git
+ * [new branch]      main -> main
+
+bot:次に共同開発に必要な手順を練習していきます。  まず、「git checkout -b test」を実行し、  testブランチの作成および移動をしましょう。
+uni:
+uni:
+uni:git checkout -b test
+cmd:
+cmd:Switched to a new branch 'test'
+
+bot:README.md(ファイルの中身は空でよい)を作成し、 「git status」を実行してください。
+uni:git status
+cmd:On branch test
+nothing to commit, working tree clean
+
+cmd:
+bot:ここではステージングやCommitが必要なファイルが表示されます。「git add README.md」を実行し、  README.mdをステージングしましょう
+uni:git add REDME.md.txt
+cmd:
+cmd:fatal: pathspec 'REDME.md.txt' did not match any files
+
+uni:git add README.md
+cmd:
+cmd:
+bot:「git commit -m "README"」を実行しましょう
+uni:git commit -m "README"
+cmd:[test cc15f08] README
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+cmd:
+bot:「git push origin test」を実行しましょう。 ブランチでの変更をリモートリポジトリに更新します。  初期実装以外のPushでは-uは必要ありません
+uni:git push origin test
+cmd:
+cmd:remote: 
+remote: Create a pull request for 'test' on GitHub by visiting:        
+remote:      https://github.com/M2t-expt/guest1/pull/new/test        
+remote: 
+To https://github.com/M2t-expt/guest1.git
+ * [new branch]      test -> test
+
+bot:リモートリポジトリにてプルリクエストを作成してください。その後、Mergeを行ってください。Mergeが完了したら「git checkout main」を実行しましょう。
+uni:
+GCBot:Pull Requestを検知
+GCBot:Pull Requestの情報を取得中
+bot:シナリオ外のPull Requestの作成を検知しました
+GCBot:Pull Requestを検知
+GCBot:Pull Requestの情報を取得中
+GCBot:Pull RequestがClosed
+uni:git checkout main
+cmd:Your branch is up to date with 'origin/main'.
+
+cmd:Switched to branch 'main'
+
+bot:「git pull origin main」を実行してください。  リモートリポジトリでMergeした内容をローカルリポジトリに保存します。
+uni:git pull origin main
+cmd:Updating 832a1a7..0a3f1bb
+Fast-forward
+ README.md | 0
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+
+cmd:From https://github.com/M2t-expt/guest1
+ * branch            main       -> FETCH_HEAD
+   832a1a7..0a3f1bb  main       -> origin/main
+
+bot:以上でチュートリアルは終了です。一度タイトルへ戻り、正常系シナリオへ進んでください。
+uni:
+Log out
